@@ -1,0 +1,92 @@
+.download .download-container{
+    padding: 2rem 2% 2rem;
+    margin-top: 5rem;
+}
+.download .download-container .content .path{
+    font-size: 0.7rem;
+    color: var(--third-color);
+    margin: 0;
+}
+.download .download-container .content .path i{
+    color: var(--primary-color);
+    padding: 0 .7rem;
+}
+.download .download-container .content .btns{
+    padding: .7rem;
+    background-color: #202227a4;
+    border-radius: 10px;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.download .download-container .content .btns button{
+    padding: .7rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.download .download-container .content .btns button i{
+    padding-right: .5rem;
+}
+.download .download-container .content .btns .back{
+    background-color: var(--fourth-color);
+    color: black;
+}
+.download .download-container .content .btns .download{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.download .download-container .content .server-con {
+    padding: 1rem;
+    background-color: #202227a4;
+    border-radius: 10px;
+}
+.download .download-container .content .server-con .heading{
+    color: white;
+    width: 100%;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-image: linear-gradient(to left,var(--second-color),var(--second-color),transparent);
+}
+.download .download-container .content .server-con .heading span{
+    color: var(--fourth-color);
+}
+.download .download-container .content .server-con .heading i{
+    padding-left: .5rem;
+}
+.download .download-container .content .server-con .item{
+    margin-bottom: 1.3rem;
+}
+.download .download-container .content .server-con .item .info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    background-color: #ffffff0d;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    transition: .3s ease;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.download .download-container .content .server-con .item .info i{
+    font-size: 2rem;
+}
+.download .download-container .content .server-con .item .info.adjust{
+    width: fit-content;
+}
+.download .download-container .content .server-con .item .info.active,
+.download .download-container .content .server-con .item .info:hover{
+    background-color: var(--green-color);
+}
+.download .download-container .content .server-con .item .data p{
+   margin: 0;
+}
+.download .download-container .content .server-con .item .data .name{
+    margin-bottom: .5rem;
+}

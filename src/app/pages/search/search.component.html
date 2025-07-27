@@ -1,0 +1,41 @@
+<div class="search">
+    <div class="search-container">
+        <div class="content">
+            <div class="row">
+            <div class="col-lg-9">
+            <div class="search-con">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="أبحث فى بوب كورن روم  ..." [(ngModel)]="searchTerm" (keyup)="showAll = false">
+            </div>
+            </div>
+            <div class="btns-con col-lg-3">
+                <div class="btn" (click)="showAll = true"> الكل</div>
+                <div class="btn" (click)="goBack()"> إغلاق</div>
+            </div>
+        </div>
+                <!-- ========= movies ============== -->
+                <div class="new-added row">
+                        <div class="item-con col-6 col-md-4 col-lg-3" *ngFor="let movie of filteredMovies " (click)="details(movie.movieId)">
+                        <div class="item">
+                            <a  class="img-container" >
+                                <img [src]="movie.movieImageUrl" alt="">
+                            </a>
+                            <div class="cover">
+                              <p>{{movie.movieName}}</p>
+                            </div>                          
+                            <div class="absolute">
+                              <div class="type">{{movie.filmType.slice(0,(movie.filmType).indexOf(" "))}}</div>
+                               <div class="quality">{{movie.filmQuality}}</div>
+                               <div class="estimation"><i class="fa-solid fa-star"></i> {{movie.estimation}}</div>
+                            </div>
+                            <div class="pause-icon">
+                                <span class="top"></span>
+                                <span class="bottom"></span>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+        <!-- ========= movies ============== -->
+        </div>
+    </div>
+</div>

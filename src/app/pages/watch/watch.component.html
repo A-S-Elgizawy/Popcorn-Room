@@ -1,0 +1,75 @@
+
+<div class="watch">
+    <div class="watch-container">
+        <div class="content">
+             <p class="path">الاحــــدث<i class="fa-solid fa-chevron-left"></i>أفلام أجنبى<i class="fa-solid fa-chevron-left"></i> {{movie.movieName}} <i class="fa-solid fa-chevron-left"></i> صفحة المشاهدة</p>
+             <div class="btns">
+                <button class="back" (click)="gotodetails(movie.movieId)"> عودة للتفاصيل <i class="fa-solid fa-arrow-left"></i></button>
+                <button class="download" (click)="gotodown(movie.movieId)"> تحميل الأن <i class="fa-solid fa-download"></i></button>
+            </div>   
+                <div class="row">
+                    <div class="server col-12 col-lg-2">
+                        <div class="item one">
+                            <p>سيرفرات المشاهدة</p>
+                        </div>
+                        <div class="item servercon active">
+                            <div class="icon-con">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <p> متعدد الجودات </p>
+                        </div>
+                        <div class="item servercon">
+                            <div class="icon-con color1">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <p>UpDown</p>
+                        </div>
+                        <div class="item servercon">
+                            <div class="icon-con color2">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <p>StreamWish</p>
+                        </div>
+                        <div class="item servercon">
+                            <div class="icon-con color3">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <p>DoodStream</p>
+                        </div>
+                        <div class="item servercon">
+                            <div class="icon-con color4">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <p>StramTape</p>
+                        </div>
+                        <div class="item servercon">
+                            <div class="icon-con color5">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <p>UpLoad</p>
+                        </div>
+                        <div class="item servercon">
+                            <div class="icon-con color6">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <p>fileMoon</p>
+                        </div>
+                        <div class="item servercon">
+                            <div class="icon-con color7">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <p>MixDrop</p>
+                        </div>
+                    </div>
+                    <div class="display col-12 col-lg-10">
+                        <div class="dispay-film">
+                            <div class="img-con">
+                                <!-- <img src="https://web2.topcinema.cam/wp-content/uploads/2025/05/MV5BYjNlM2I2ZjAtNjg0OS00MTVkLTgzMzAtNTM3Yzc0OThiYjUxXkEyXkFqcGc@.jpg_V1_SX700-456x650.jpg" alt=""> -->
+                                 <div class="video"><i class="fa-solid fa-circle-play"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

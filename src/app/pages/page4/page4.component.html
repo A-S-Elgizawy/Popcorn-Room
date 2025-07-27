@@ -1,0 +1,105 @@
+ <div class="type-container">
+    <div class="content">
+         <div class="main-heading">
+        <h2>الأفـــــــــلام</h2>
+        <div class="con-span">
+        <span class="line"></span>
+        <span class="dote"></span>
+        <span class="dote"></span>
+        <span class="dote"></span>
+        <span class="dote"></span>
+        </div>
+        </div>
+        <div class="filter row">
+            <div class="heading col-6 col-lg-2">أتفرج على مزاجك</div>
+                <div class="dropdown col-6 col-lg-2" id="dropdown" >
+                <button class="dropdown-button" id="dropdownBtn"> <span class="typeName">الأنواع</span> <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <div (click)="selectchoise('الكل')" (click)="selectOption('الكل', 'type')">الكل</div>
+                    <div (click)="selectchoise('اكشن')" (click)="selectOption('اكشن', 'type')">اكشن</div>
+                    <div (click)="selectchoise('اثارة')" (click)="selectOption('اثارة', 'type')">اثارة</div>
+                    <div (click)="selectchoise('خيال علمى')" (click)="selectOption('خيال علمى', 'type')">خيال علمى</div>
+                    <div (click)="selectchoise('كوميدي')" (click)="selectOption('كوميدي', 'type')">كوميدي</div>
+                    <div (click)="selectchoise('رعب')" (click)="selectOption('رعب', 'type')">رعب</div>
+                </div>
+                </div>
+
+                <div class="dropdown col-6 col-lg-2" id="dropdown" >
+                <button class="dropdown-button" id="dropdownBtn"> <span class="typeName">اللغة</span> <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <div (click)="selectchoise('الكل')" (click)="selectOption('الكل', 'language')">الكل</div>
+                    <div (click)="selectchoise('الإنجليزية')" (click)="selectOption('الإنجليزية', 'language')">الإنجليزية</div>
+                    <div (click)="selectchoise('الفرنسية')" (click)="selectOption('الفرنسية', 'language')">الفرنسية</div>
+                    <div (click)="selectchoise('اليابانية')" (click)="selectOption('اليابانية', 'language')">اليابانية</div>
+
+                </div>
+                </div>
+
+                <div class="dropdown col-6 col-lg-2" id="dropdown" >
+                <button class="dropdown-button" id="dropdownBtn"> <span class="typeName">سنة الاصدار</span> <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <div (click)="selectchoise('الكل')" (click)="selectOption('الكل', 'year')">الكل</div>
+                    <div (click)="selectchoise('2025')" (click)="selectOption('2025', 'year')">2025</div>
+                    <div (click)="selectchoise('2024')" (click)="selectOption('2024', 'year')">2024</div>
+                </div>
+                </div>
+
+                <div class="dropdown col-6 col-lg-2" id="dropdown" >
+                <button class="dropdown-button" id="dropdownBtn"> <span class="typeName">الدولة</span> <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <div (click)="selectchoise('الكل')" (click)="selectOption('الكل', 'country')">الكل</div>
+                    <div (click)="selectchoise('أمريكا')" (click)="selectOption('الولايات المتحدة الامريكية', 'country')">أمريكا</div>
+                    <div (click)="selectchoise('المملكة المتحدة')" (click)="selectOption('المملكة المتحدة', 'country')">المملكة المتحدة</div>
+                    <div (click)="selectchoise('اليابان')" (click)="selectOption('اليابان', 'country')">اليابان</div>
+                    <div (click)="selectchoise('فنلندا')" (click)="selectOption('فنلندا', 'country')">فنلندا</div>
+                    <div (click)="selectchoise('اسبانيا')" (click)="selectOption('اسبانيا', 'country')">اسبانيا</div>
+                    <div (click)="selectchoise('الأرجنتين')" (click)="selectOption('الأرجنتين', 'country')">الأرجنتين</div>
+                </div>
+                </div>
+
+                <div class="filter-btn col-6 col-lg-2" (click)="filterMovies()">
+                    <p>تصفية</p>
+                </div>
+        </div>
+        <!-- ========= movies ============== -->
+                <div class="new-added row">
+                        <div class="item-con col-6 col-md-4 col-lg-3" *ngFor="let movie of filteredMovies" (click)="details(movie.movieId)">
+                        <div class="item">
+                            <a  class="img-container" >
+                                <img [src]="movie.movieImageUrl" alt="">
+                            </a>
+                            <div class="cover">
+                              <p>{{movie.movieName}}</p>
+                            </div>                          
+                            <div class="absolute">
+                              <div class="type">{{movie.filmType.slice(0,(movie.filmType).indexOf(" "))}}</div>
+                               <div class="quality">{{movie.filmQuality}}</div>
+                               <div class="estimation"><i class="fa-solid fa-star"></i> {{movie.estimation}}</div>
+                            </div>
+                            <div class="pause-icon">
+                                <span class="top"></span>
+                                <span class="bottom"></span>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+        <!-- ========= movies ============== -->
+         <!-- navigation======================= -->
+        <div class="navigation-container">
+            <div class="cheveson-icon right" routerLink="/movis/page3"><i class="fa-solid fa-chevron-right"></i></div>
+             <!-- <div class="number-con  " routerLink="/movis/page1"><p>1</p></div>
+             <div class="number-con " routerLink="/movis/page2"><p>2</p></div> -->
+             <div class="number-con dots"><p>...</p></div>
+             <div class="number-con " routerLink="/movis/page3"><p>3</p></div>
+             <div class="number-con active" routerLink="/movis/page4"><p>4</p></div>
+             <div class="number-con" routerLink="/movis/page5"><p>5</p></div>
+             <!-- <div class="number-con" routerLink="/movis/page3"><p>6</p></div> -->
+             <div class="number-con dots"><p>...</p></div>
+             <div class="number-con" routerLink="/movis/page8"><p>8</p></div>
+            <div class="cheveson-icon" routerLink="/movis/page5"><i class="fa-solid fa-chevron-left"></i></div>
+        </div>
+         <!-- navigation======================= -->
+    </div>
+ </div>
+
+

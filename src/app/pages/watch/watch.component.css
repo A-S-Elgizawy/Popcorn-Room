@@ -1,0 +1,154 @@
+.watch .watch-container{
+    padding: 2rem 2%;
+    margin-top: 5rem;
+}
+.watch .watch-container .content .path{
+    font-size: 0.7rem;
+    color: var(--third-color);
+    margin: 0;
+}
+.watch .watch-container .content .path i{
+    color: var(--primary-color);
+    padding: 0 .7rem;
+}
+.watch .watch-container .content .btns{
+    padding: .7rem;
+    background-color: #202227a4;
+    border-radius: 10px;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.watch .watch-container .content .btns button{
+    padding: .7rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.watch .watch-container .content .btns button i{
+    padding-right: .5rem;
+}
+.watch .watch-container .content .btns .back{
+    background-color: var(--fourth-color);
+    color: black;
+}
+.watch .watch-container .content .btns .download{
+    background-color: var(--green-color);
+    color: white;
+}
+.watch .watch-container .content .server .item{
+    width: 100%;
+    height: 3rem;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    background-color: var(--second-color); 
+    font-size: 1.1rem;
+    margin-bottom: .8rem;
+    padding-right: 1rem;
+    transition: .4s ease;
+    cursor: pointer;
+}
+.watch .watch-container .content .server .item p{
+    margin: 0;
+    font-weight: bold;
+}
+.watch .watch-container .content .server .item.one{
+    padding: .5rem;
+}
+.watch .watch-container .content .server .item.one p{
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+}
+.watch .watch-container .content .server .item.one{
+    background-color: var(--primary-color);
+    font-weight: bold;
+}
+.watch .watch-container .content .server .servercon.active{
+    background-color: var(--primary-color);
+}
+.watch .watch-container .content .server .item .icon-con{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: 1rem;
+    background-color: red;
+    font-size: 1rem;
+}
+.watch .watch-container .content .server .item .icon-con i{
+    font-size: 1rem;
+}
+.watch .watch-container .content .server .item .color1{
+    background-color: #1565c0;
+}
+.watch .watch-container .content .server .item .color2{
+    background-color: #dd2c00;
+}
+.watch .watch-container .content .server .item .color3{
+    background-color: #7e354d;
+}
+.watch .watch-container .content .server .item .color4{
+    background-color: #ffd600;
+}
+.watch .watch-container .content .server .item .color5{
+    background-color: #006064;
+}
+.watch .watch-container .content .server .item .color6{
+    background-color: #8b25d1;
+}
+.watch .watch-container .content .server .item .color7{
+    background-color: #60c8f1;
+}
+.watch .watch-container .content .server .item:hover{
+    background-color: var(--primary-color);
+}
+/* ====================================== */
+
+.display .dispay-film .img-con{
+    width: 100%;
+    height: 34rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.display .dispay-film .img-con .video{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(10, 10, 10);
+    position: relative;
+    
+}
+/* .display .dispay-film{
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--second-color);
+} */
+.display .dispay-film .img-con .video i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 4.5rem;
+    color: rgb(173, 173, 173);
+    cursor: pointer;
+}
+
+@media (max-width:990px){
+    .watch .watch-container .content .server{
+        display: flex;
+        gap: 2%;
+        flex-wrap: wrap;
+    }
+    .watch .watch-container .content .server .item.one{
+        width: 100%;
+    }
+    .watch .watch-container .content .server .item:not(.watch .watch-container .content .server .item.one) {
+        width: calc((100% / 2) - 1%);
+    }
+}

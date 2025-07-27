@@ -1,0 +1,64 @@
+
+<div class="img-container">
+    <img src="https://i.pinimg.com/736x/73/9a/15/739a15f89a6c439077ed7eae16b555e4.jpg" alt="">
+    <div class="cover"></div>
+</div>
+
+<header>
+    <nav>
+        <div class="menu" (click)="openList()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <a href="#" class="logo">
+            <p class="en"><span>Popcorn</span>Room</p>
+            <!-- <p class="ar">تــــــــوب سينما</p> -->
+        </a>
+        <div class="links">
+            <div class="close-icon" (click)="closeList()" ><i class="fa-solid fa-xmark"></i></div>
+        <a  class="link main active" routerLink="/mainpage" routerLinkActive="active" (click)="activeLink()">الرئيسية</a>
+        <a  class="link main " routerLink="/home" routerLinkActive="active" (click)="activeLink()">الأحــــدث</a>
+        <a  class="link main" routerLink="/movis" routerLinkActive="active" (click)="activeLink()"><span class="filmlink">أفلام </span> 
+        <ul class="films">
+            <li *ngFor="let type of typeMovies;let i = index" [style.--i]="i"  [style.--i]="i" [style.--z]="typeMovies.length - 1 - i" (click)="type.filmTypeId" [routerLink]="['/types', type.filmTypeId]">{{type.filmTypeName}}</li>
+            <!-- <li style="--i:1; --z:4;">حرب</li>
+            <li style="--i:2; --z:3;">إثارة</li>
+            <li style="--i:3; --z:2;">خيال عملى</li>
+            <li style="--i:4; --z:1;">كوميدى</li>
+            <li style="--i:5; --z:0;">رعب</li> -->
+        </ul>
+        </a>
+
+        <a  class="link main" routerLink="/series1" routerLinkActive="active" (click)="activeLink()"> <span class="seriesLink">مسلسلات </span>
+            <ul class="series">
+            <li style="--i:0; --z:2;">عربى</li>
+            <li style="--i:1; --z:1;">تركى</li>
+            <li style="--i:2; --z:0;">أجنبى</li>
+        </ul>
+        </a>
+        <a  class="link main" routerLink="/anime1" routerLinkActive="active" (click)="activeLink()">أنمى
+        <ul class="anime films">
+            <li >كرتون</li>
+        </ul>
+        </a>
+        </div>
+        <div class="media">
+            <div class="icon" routerLink="/search"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-telegram"></i>
+        </div>
+        
+    </nav>
+</header>
+
+<router-outlet></router-outlet>
+<footer>
+    <div class="footer-container">
+        <p>جميع الحقوق محفوظة بوب كورن &copy; 2025</p>
+    </div>
+</footer>
+
+
+

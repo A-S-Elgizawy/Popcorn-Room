@@ -1,0 +1,94 @@
+
+
+<div class="movie-details">
+    <div class="movie-container ">
+        <div class="content row">
+         <div class="img-content col-sm-6 col-12  col-lg-3">
+            <div class="img-container">
+            <img [src]="movie.movieImageUrl" alt="">
+            </div>
+            <div class="esstimation-watch">
+                <p><i class="fa-solid fa-star"></i> IMDb {{movie.estimation}} </p>
+                <p>مشاهدة التريلر <i class="fa-solid fa-tv"></i></p>
+            </div>
+        </div>
+         <div class="data-container col-12  col-lg-7">
+               <h2 class="name">{{movie.movieName}}</h2>
+               <p class="path">الاحـــدث<i class="fa-solid fa-chevron-left"></i> {{movie.filmSection}}<i class="fa-solid fa-chevron-left"></i>{{movie.movieName}}</p>
+                <div class="main-heading">
+                <h2>قصة الفيلم </h2>
+                <div class="con-span">
+                <span class="line"></span>
+                <span class="dote"></span>
+                <span class="dote"></span>
+                <span class="dote"></span>
+                <span class="dote"></span>
+                </div>
+                </div>
+                <div class="description">
+                    <p>{{movie.discription}}</p>
+                </div>
+                <div class="main-heading">
+                <h2> تفاصيل الفيلم </h2>
+                <div class="con-span">
+                <span class="line"></span>
+                <span class="dote"></span>
+                <span class="dote"></span>
+                <span class="dote"></span>
+                <span class="dote"></span>
+                </div>
+                </div>
+                <div class="info-con">
+                    <div class="item">
+                        <p><span><i class="fa-solid fa-folder"></i> قسم الفيلم : </span> {{movie.filmSection}} </p>
+                        <p><span><i class="fa-solid fa-folder"></i> نوع الفيلم : </span> {{movie.filmType}} </p>
+                        <p><span><i class="fa-solid fa-play"></i>  جودة الفيلم : </span> {{movie.filmQuality}} </p>
+                        <p><span><i class="fa-solid fa-calendar"></i>  موعد الصدور : </span> {{movie.releaseDate}} </p>
+                        <p *ngIf="movie.filmLanguage !== '' "><span><i class="fa-solid fa-language"></i>  لغة الفيلم : </span> {{movie.filmLanguage}} </p>
+                        <p><span><i class="fa-solid fa-flag"></i>   دولة الفيلم : </span> {{movie.filmCountry}} </p>
+                        <p *ngIf="movie.movieTiming !== ''"><span><i class="fa-solid fa-clock"></i>  توقيت الفيلم : </span> {{movie.movieTiming}} </p>
+                        <p *ngIf="movie.directors !== '' "><span><i class="fa-solid fa-user"></i>   المخرجين : </span> {{movie.directors}} </p>
+                        <p><span><i class="fa-solid fa-user"></i>   بطولة : </span> {{movie.championship}} </p>
+                    </div>
+                </div>
+         </div>
+         <div class="watch-con col-12  col-lg-2">
+            <div class="watch mutaul" (click)="gotowatch(movie.movieId)">
+                <i class="fa-solid fa-clapperboard"></i>
+                <h2>مشاهدة الأن</h2>
+                 <p>الذهاب لصفحة المشاهدة</p>
+            </div>
+            <div class="download mutaul"  (click)="gotodown(movie.movieId)">
+                <i class="fa-solid fa-download"></i>
+                <h2 >تحميل الأن</h2>
+                 <p>الذهاب لصفحة التحميل</p>
+            </div>
+         </div>
+         </div>
+          <div class="main-heading">
+                <h2> مشاهدة عروض أخرى</h2>
+                <div class="con-span">
+                <span class="line"></span>
+                <span class="dote"></span>
+                <span class="dote"></span>
+                <span class="dote"></span>
+                <span class="dote"></span>
+                </div>
+            </div>
+
+      <div class="swiper swipertwo swiperhover">
+            <div class=" swiper-wrapper">
+                        <div class="swiper-slide not  " *ngFor="let relatedmovie of movie.relatedMovies " (click)="details(relatedmovie.movieId)">
+                            <a  class="img-container" >
+                                <img [src]="relatedmovie.movieImageUrl" alt="">
+                            </a>
+                            <div class="cover">
+                              <p>{{relatedmovie.movieName}}</p>
+                            </div>                          
+                       </div>
+                 </div>
+          <div class="swiper-button-next"><i class="fa-solid fa-chevron-left"></i></div>
+          <div class="swiper-button-prev"><i class="fa-solid fa-chevron-right"></i></div>
+      </div>
+    </div>
+</div>
