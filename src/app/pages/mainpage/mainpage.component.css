@@ -1,0 +1,734 @@
+.main-page .mainPage-container{
+    background-color: var(--cover-black);
+}
+.main-page .mainPage-container .page-animation {
+    width: 100%;
+    height: 130vh;
+    position: relative;
+    overflow: hidden;
+}
+.main-page .mainPage-container .page-animation  .img-con{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.main-page .mainPage-container .page-animation  .img-con .cover{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, var(--cover-black), transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.main-page .mainPage-container .page-animation  .img-con img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-page .mainPage-container .page-animation h1{
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    font-size: 2.1rem;
+    font-size: clamp(1.5rem, 2.5vw , 3rem);
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.904);
+    z-index: 2;
+}
+.main-page .mainPage-container .page-animation  .items-con{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    width: 80vw;
+    margin-top: 1rem;
+    z-index: 2;
+}
+.main-page .mainPage-container .page-animation  .items-con .item{
+    padding: 0 1.7rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.main-page .mainPage-container .page-animation  .items-con .item:not(.item:nth-of-type(1)){
+   border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+.main-page .mainPage-container .page-animation  .items-con .item i{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.main-page .mainPage-container .page-animation  .items-con .item p{
+    margin: 0;
+    font-size: .8rem;
+    font-weight: bold;
+    color: white;
+}
+.main-page .mainPage-container .bar-animation {
+    padding: 0 3rem;
+    background-color: var(--cover-black);
+    position: relative;
+}
+.main-page .mainPage-container .bar-animation.tow{
+    margin-top: 6rem;
+    padding: 3rem;
+}
+.main-page .mainPage-container .bar-animation .cover{
+    position: absolute;
+    top: 3rem;
+    left: 2.5rem;
+    width: 1rem;
+    height: 85%;
+    background-color: var(--cover-black);
+     /* background-color: red; */
+    z-index: 50;
+    filter: blur(4px);
+}
+.main-page .mainPage-container .bar-animation .cover.left{
+    right: 2.5rem;
+    background-color: var(--cover-black);
+}
+
+.main-heading{
+    position: relative;
+    margin: 1rem;
+}
+.main-heading h2{
+    font-size: 1.4rem;
+    color: white;
+    padding-bottom: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+.main-heading .con-span{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.main-heading .con-span .line{
+    width: 6rem;
+    height: 5px;
+    border-radius: 3px;
+    background-color: var(--primary-color);
+}
+.main-heading .con-span .dote{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+/* swiper=================== */
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  background: var(--cover-black);
+  padding: 10px 0;
+}
+
+.scroll-content {
+  display: flex;
+  width: fit-content;
+  animation: scroll-left 30s linear infinite;
+  animation-play-state: running;
+}
+.scroll-content:hover {
+  animation-play-state: paused;
+}
+
+.movie-item {
+  flex-shrink: 0;
+  margin-right: 20px;
+
+  img {
+    height: 250px;
+    border-radius: 10px;
+    display: block;
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* swiper=================== */
+.plateForms{
+    position: relative;
+    bottom: -12rem;
+    opacity: 0;
+    transition: .5s ease
+}
+.plateForms.active{
+    bottom: 0rem;
+    opacity: 1;
+}
+.plateForms .plateform-container{
+    padding: 3rem 6% 6rem;
+    background-color: var(--second-color);
+    /* background: #4b0082; */
+    clip-path: ellipse(100% 100% at 50% 0%);
+
+}
+
+.plateForms .plateform-container .text p{
+    margin: 1.7rem 0 2.2rem;
+    font-size: 1rem;
+    color: rgb(175, 170, 170);
+    font-weight: bold;
+}
+.plateForms .plateform-container .text button{
+    width: 14rem;
+    padding: .8rem 0;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    outline: none;
+    transition: .3s ease;
+}
+.plateForms .plateform-container .text button:hover{
+     background-color: #ff757c;
+}
+.plateForms .plateform-container .big-con{
+    align-items: center;
+    justify-content: center;
+    /* height: 25rem; */
+}
+.plateForms .plateform-container .photos .images-container{
+    justify-content: center;
+    align-items: center;
+}
+.plateForms .plateform-container .photos .images-container .img-con{
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 1.3rem;
+}
+.plateForms .plateform-container .photos .images-container .img-con img{
+    width: 65%;
+    height: 65%;
+    object-fit: cover;
+
+}
+.plateForms .plateform-container .photos .images-container .img-con img.netflex{
+    width: 86%;
+    height: 57%;
+}
+.plateForms .plateform-container .photos .images-container .img-con img.hbo{
+    width: 75%;
+    height: 72%;
+}
+.plateForms .plateform-container .photos .images-container .img-con img.disney{
+    height: 86%;
+}
+.kids-part{
+    position: relative;
+    bottom: -12rem;
+    opacity: 0;
+    transition: .5s ease
+}
+.kids-part.active{
+    opacity: 1;
+    bottom: 0rem;
+}
+.kids-part .kidsPart-container{
+    padding: 3rem 6%;
+    background-color: var(--second-color);
+    clip-path: ellipse(100% 100% at 50% 100%);
+}
+.kids-part .kidsPart-container .text{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.kids-part .kidsPart-container .text h2{
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: white;
+}
+.kids-part .kidsPart-container .text p{
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgb(175, 170, 170);
+    margin:0;
+}
+.kids-part .kidsPart-container .images-con .img-con{
+    width: 100%;
+    height: 23rem;
+}
+.kids-part .kidsPart-container .images-con .img-con img{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .medium {
+    border: none !important;
+  }
+  .items-con .item {
+    padding: 0 1rem !important;
+  }
+  .plateform-container {
+    padding-bottom: 3rem !important;
+  }
+  .plateForms .plateform-container .photos .images-container .img-con{
+    padding: 20px !important;
+  }
+  .items-con {
+    margin-top: 3rem !important;
+  }
+}
+
+
+@media (max-width: 767.98px) {
+  .small {
+    border: none !important;
+  }
+  .items-con {
+    margin-top: 1rem !important;
+  }
+  .main-page .mainPage-container .page-animation h1{
+    top: 53%;
+}
+
+    .items-con .item {
+    padding: 0 .5rem !important;
+  }
+    .plateform-container {
+    padding-bottom: 3rem !important;
+  }
+  .main-page .mainPage-container .page-animation  .items-con .item p{
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+    .plateForms .plateform-container .big-con .text {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom: 2rem;
+  }
+  .plateForms .plateform-container .photos .images-container .img-con{
+    padding: 16px !important;
+  }
+    .plateForms .plateform-container .photos .images-container .img-con img{
+     width: 36%;
+    height: 60%;
+    object-fit: cover;
+  }
+  .plateForms .plateform-container .photos .images-container .img-con img.netflex{
+        width: 52%;
+        height: 45%;
+}
+.plateForms .plateform-container .photos .images-container .img-con img.hbo{
+    width: 40%;
+    height: 72%;
+}
+.plateForms .plateform-container .photos .images-container .img-con img.disney{
+    height: 86%;
+}
+}
+
+
+/* ANIMATIN-TITLE======================= */
+.animation-title {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 150;
+  display: flex;
+  align-items: center;
+}
+.animation-title .popcorn,
+.animation-title .room{
+  display: flex;
+  align-items: center;
+}
+/* .animation-title.skew1{
+      transform:  skewX(332deg);
+      left: -40rem;
+      animation: skew1 2s ease-in-out  forwards;
+} */
+
+/* @keyframes skew1 {
+  0% {
+    transform: skewX(332deg);
+    left: -40rem;
+  }
+  100% {
+    left: 50%;
+    transform: translateX(-50%) skewX(0deg) ;
+  }
+  
+} */
+.animation-title .popcorn{
+    padding-right: 2rem;
+}
+.animation-title div{
+  
+  font-weight: bold;
+  font-size: 2rem;
+  -webkit-text-stroke: .1rem black;
+  color: transparent;
+  padding: 0 .8rem;
+  transition: transform 0.3s;
+  opacity: 0;
+   font-family: "Luckiest Guy";
+}
+
+.animation-title.scale div{
+  transform: translateX(-50%);
+    animation:Scale1 1s ease-in-out forwards;
+    animation-delay: calc(var(--z) * .5s);
+}
+.animation-title.color div{
+    opacity: 1;
+    transform: translateX(-50%) scale(2.2);
+    animation: ccolor  1s ease-in-out forwards;
+    animation-delay: calc(var(--i) * .5s);
+}
+
+@keyframes Scale1 {
+   0%{
+        opacity: 0;
+   }
+   100%{
+        opacity: 1;
+        transform: translateX(-50%) scale(2.2);
+   }
+}
+@keyframes ccolor {
+   0%{
+        transform:translateX(-50%) rotate(0) scale(2.2);
+   }
+   100%{
+        color: #880807;
+        transform:translateX(-50%)  rotate(360deg) scale(2.2) ;
+   }
+}
+/* .animation-title.color-scale .popcorn div:nth-of-type(2){
+    animation:colorScale2 1.5s ease-in-out forwards;
+    animation-delay: 1.2s;
+}
+.animation-title.color-scale .popcorn div:nth-of-type(3){
+    animation:colorScale3 1.5s ease-in-out forwards;
+    animation-delay: 2.4s;
+}
+.animation-title.color-scale .popcorn div:nth-of-type(4){
+    animation:colorScale4 1.5s ease-in-out forwards;
+    animation-delay: 3.8s;
+}
+.animation-title.color-scale .popcorn div:nth-of-type(5){
+    animation:colorScale5 1.5s ease-in-out forwards;
+    animation-delay: 4.8s;
+}
+.animation-title.color-scale .popcorn div:nth-of-type(6){
+    animation:colorScale6 1.5s ease-in-out forwards;
+    animation-delay: 6.1s;
+}
+.animation-title.color-scale .popcorn div:nth-of-type(7){
+    animation:colorScale7 1.5s ease-in-out forwards;
+    animation-delay: 7.5s;
+} */
+
+/* @keyframes colorScale1 {
+  0% {
+    color: var(--primary-color);
+  }
+  10%{
+    color: var(--primary-color);
+    transform: scale(1.2);
+  }
+  30%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  40%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  50%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  60%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  70%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  80%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  90%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  100% {
+    color: var(--primary-color);
+    transform: translateY(0) scale(1.2);
+  }
+}
+@keyframes colorScale2 {
+  0% {
+    color: var(--primary-color);
+  }
+  10%{
+    color: var(--primary-color);
+    transform: scale(1.2);
+  }
+  30%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  40%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  50%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  60%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  70%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  80%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  90%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  100% {
+    color: var(--primary-color);
+    transform: translateY(0) scale(1.2);
+  }
+}
+@keyframes colorScale3 {
+  0% {
+    color: var(--primary-color);
+  }
+  10%{
+    color: var(--primary-color);
+    transform: scale(1.2);
+  }
+  30%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  40%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  50%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  60%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  70%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  80%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  90%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  100% {
+    color: var(--primary-color);
+    transform: translateY(0) scale(1.2);
+  }
+}
+@keyframes colorScale4 {
+  0% {
+    color: var(--primary-color);
+  }
+  10%{
+    color: var(--primary-color);
+    transform: scale(1.2);
+  }
+  30%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  40%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  50%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  60%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  70%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  80%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  90%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  100% {
+    color: var(--primary-color);
+    transform: translateY(0) scale(1.2);
+  }
+}
+@keyframes colorScale5 {
+  0% {
+    color: var(--primary-color);
+  }
+  10%{
+    color: var(--primary-color);
+    transform: scale(1.2);
+  }
+  30%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  40%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  50%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  60%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  70%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  80%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  90%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  100% {
+    color: var(--primary-color);
+    transform: translateY(0) scale(1.2);
+  }
+}
+@keyframes colorScale6 {
+  0% {
+    color: var(--primary-color);
+  }
+  10%{
+    color: var(--primary-color);
+    transform: scale(1.2);
+  }
+  30%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  40%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  50%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  60%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  70%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  80%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  90%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  100% {
+    color: var(--primary-color);
+    transform: translateY(0) scale(1.2);
+  }
+}
+@keyframes colorScale7 {
+  0% {
+    color: var(--primary-color);
+  }
+  10%{
+    color: var(--primary-color);
+    transform: scale(1.2);
+  }
+  30%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  40%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  50%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  60%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  70%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  80%{
+    color: var(--primary-color);
+    transform: translateY(0px) scale(1.2);
+  }
+  90%{
+    color: var(--primary-color);
+    transform: translateY(-12px) scale(1.2);
+  }
+  100% {
+    color: var(--primary-color);
+    transform: translateY(0) scale(1.2);
+  }
+} */
