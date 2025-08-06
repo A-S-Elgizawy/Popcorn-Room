@@ -59,7 +59,7 @@ dropdown(){
    })
 }
 
-  filteredMovies: any[] = [];
+filteredMovies: any[] = [];
 selectedType: string = '';
 selectedLanguage: string = '';
 selectedCountry: string = '';

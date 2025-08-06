@@ -342,6 +342,31 @@
 }
 }
 
+@media (max-width:576px) {
+  .main-page .mainPage-container .page-animation  .items-con{
+    width: 100vw;
+}
+.main-page .mainPage-container .page-animation  .items-con .item p{
+    font-size: .8rem;
+}
+
+.main-page .mainPage-container .bar-animation {
+    padding: 0 1rem;
+}
+
+.main-page .mainPage-container .bar-animation .cover.left{
+    right: .5rem;
+}
+.main-page .mainPage-container .bar-animation .cover.right{
+    left: .5rem;
+}
+.kids-part .kidsPart-container{
+    padding: 3rem 6%;
+    background-color: var(--second-color);
+    clip-path: ellipse(100% 100% at 50% 100%);
+}
+  
+}
 
 /* ANIMATIN-TITLE======================= */
 .animation-title {

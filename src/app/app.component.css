@@ -59,14 +59,16 @@ header nav .menu span:nth-of-type(2){
 }
 header nav .logo{
     text-decoration: none;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
 }
 header nav .logo p{
     margin: 0;
     color: white;
 }
 header nav .logo .en{
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 2.5vw , 3rem);
+    text-align: center;
+        /* font-size: clamp(1.5rem, 2.5vw , 3rem); */
     font-family: "Luckiest Guy";
     font-weight: 400;
     /* height: 35px; */
@@ -86,6 +88,9 @@ header nav .logo .ar{
 }
     .close-icon{
         display: none;
+    }
+    .close-icon i{
+        font-size: 17.3px;
     }
 header nav .link{
     position: relative;
@@ -286,9 +291,12 @@ header nav .search-container input:focus{
     header nav .menu{
         display: block;
         position: absolute;
-        right: 1rem;
-        top: 1rem;
+        /* right: 1rem;
+        top: 1rem; */
+        right: .5rem;
+        top: .5rem;
     }
+
     .close-icon{
         display: block;
         border: 1px solid var(--second-color);
@@ -303,16 +311,15 @@ header nav .search-container input:focus{
         position: relative;
         left: 0;
     }
-    .close-icon i{
-        padding: 1rem;
-    }
+
     header nav .media .icon{
         position: absolute;
-        left: 0;
-        top: 1rem;
+        top: .5rem;
+        left: .5rem;
         background-color: transparent;
         margin: 0;
         height: fit-content;
+         width: fit-content;
     }
     header nav .media .icon i{
         font-size: 1.6rem;
@@ -383,8 +390,9 @@ header nav .search-container input:focus{
 }
 @media (max-width:590px) {
     header nav .links{
-        width: 60%;
+        width: 70%;
     }
+
 }
 footer{
    margin: 1rem 0;

@@ -6,6 +6,7 @@ import { Keyboard, Mousewheel, Navigation } from 'swiper/modules';
 import { MovieService } from '../../service/movie.service';
 import { NavigationEnd, Router } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+
 Swiper.use([Navigation,Keyboard,Mousewheel]);
 @Component({
   selector: 'app-home',
