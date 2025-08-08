@@ -591,17 +591,12 @@
     .background-image-container .image-con .names-container{
     position: absolute;
     bottom: 9rem;
-<<<<<<< HEAD
     right: 2rem;
-=======
-    right: 1rem;
->>>>>>> b18c497a66d7d76e180fb6f1fbbda465218a2b99
     display: flex;
     width: 100%;
     /* justify-content: flex-start; */
     align-items: start;
     flex-direction: column;
-<<<<<<< HEAD
     gap: 1.4rem;
     z-index: 6;
 }
@@ -614,11 +609,6 @@
 .background-image-container .names-container .name-con:after{
     bottom: -.8rem;
 }
-=======
-    gap: 2rem;
-    z-index: 6;
-}
->>>>>>> b18c497a66d7d76e180fb6f1fbbda465218a2b99
 }
 
 

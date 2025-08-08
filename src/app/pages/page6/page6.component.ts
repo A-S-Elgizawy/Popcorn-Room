@@ -59,11 +59,7 @@ dropdown(){
    })
 }
 
-<<<<<<< HEAD
 filteredMovies: any[] = [];
-=======
-  filteredMovies: any[] = [];
->>>>>>> b18c497a66d7d76e180fb6f1fbbda465218a2b99
 selectedType: string = '';
 selectedLanguage: string = '';
 selectedCountry: string = '';

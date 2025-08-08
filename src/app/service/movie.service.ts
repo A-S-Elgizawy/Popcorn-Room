@@ -13,10 +13,7 @@ export class MovieService {
 
 
     private apiUrl = 'http://localhost:3000/api/movies'
-<<<<<<< HEAD
     // private apiUrl = 'https://popcorn-room.onrender.com/api/movies'
-=======
->>>>>>> b18c497a66d7d76e180fb6f1fbbda465218a2b99
 
       getMovies(): Observable<any> {
       return this.http.get(this.apiUrl);

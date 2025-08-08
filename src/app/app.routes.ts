@@ -18,10 +18,7 @@ import { Anime1Component } from './pages/anime1/anime1.component';
 import { Anime2Component } from './pages/anime2/anime2.component';
 import { MainpageComponent } from './pages/mainpage/mainpage.component';
 import { MovisComponent } from './pages/movis/movis.component';
-<<<<<<< HEAD
 import { LogInComponent } from './pages/log-in/log-in.component';
-=======
->>>>>>> b18c497a66d7d76e180fb6f1fbbda465218a2b99
 
 export const routes: Routes = [
 
@@ -55,17 +52,10 @@ export const routes: Routes = [
         path:'search',
         component:SearchComponent 
     },
-<<<<<<< HEAD
     {
         path:'login',
         component:LogInComponent 
     },
-=======
-    // {
-    //     path:'update',
-    //     component:UpdatePageComponent 
-    // },
->>>>>>> b18c497a66d7d76e180fb6f1fbbda465218a2b99
 
     {
         path:'movis',
