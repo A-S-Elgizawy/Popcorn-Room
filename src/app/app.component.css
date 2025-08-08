@@ -59,16 +59,24 @@ header nav .menu span:nth-of-type(2){
 }
 header nav .logo{
     text-decoration: none;
+<<<<<<< HEAD
     /* margin-left: 1rem; */
+=======
+    margin-left: 1rem;
+>>>>>>> b18c497a66d7d76e180fb6f1fbbda465218a2b99
 }
 header nav .logo p{
     margin: 0;
     color: white;
 }
 header nav .logo .en{
+<<<<<<< HEAD
     font-size: clamp(1.5rem, 2.5vw , 3rem);
     text-align: center;
         /* font-size: clamp(1.5rem, 2.5vw , 3rem); */
+=======
+    font-size: 2rem;
+>>>>>>> b18c497a66d7d76e180fb6f1fbbda465218a2b99
     font-family: "Luckiest Guy";
     font-weight: 400;
     /* height: 35px; */
@@ -89,9 +97,12 @@ header nav .logo .ar{
     .close-icon{
         display: none;
     }
+<<<<<<< HEAD
     .close-icon i{
         font-size: 17.3px;
     }
+=======
+>>>>>>> b18c497a66d7d76e180fb6f1fbbda465218a2b99
 header nav .link{
     position: relative;
     text-decoration: none;
@@ -291,12 +302,18 @@ header nav .search-container input:focus{
     header nav .menu{
         display: block;
         position: absolute;
+<<<<<<< HEAD
         /* right: 1rem;
         top: 1rem; */
         right: .5rem;
         top: .5rem;
     }
 
+=======
+        right: 1rem;
+        top: 1rem;
+    }
+>>>>>>> b18c497a66d7d76e180fb6f1fbbda465218a2b99
     .close-icon{
         display: block;
         border: 1px solid var(--second-color);
@@ -311,6 +328,7 @@ header nav .search-container input:focus{
         position: relative;
         left: 0;
     }
+<<<<<<< HEAD
 
     header nav .media .icon{
         position: absolute;
@@ -320,6 +338,18 @@ header nav .search-container input:focus{
         margin: 0;
         height: fit-content;
          width: fit-content;
+=======
+    .close-icon i{
+        padding: 1rem;
+    }
+    header nav .media .icon{
+        position: absolute;
+        left: 0;
+        top: 1rem;
+        background-color: transparent;
+        margin: 0;
+        height: fit-content;
+>>>>>>> b18c497a66d7d76e180fb6f1fbbda465218a2b99
     }
     header nav .media .icon i{
         font-size: 1.6rem;
@@ -390,9 +420,14 @@ header nav .search-container input:focus{
 }
 @media (max-width:590px) {
     header nav .links{
+<<<<<<< HEAD
         width: 70%;
     }
 
+=======
+        width: 60%;
+    }
+>>>>>>> b18c497a66d7d76e180fb6f1fbbda465218a2b99
 }
 footer{
    margin: 1rem 0;
