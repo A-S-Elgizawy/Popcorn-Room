@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-
+// const router = express.Router();
 const Movie = require('./models/Movie');
 
 
@@ -12,7 +12,8 @@ app.use(express.json());
 app.use(cors()); // للسماح للـ Angular بالاتصال
 
 
-const PORT = 3000;
+// const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // API بسيط يعيد بيانات أفلام وهمية
 
@@ -17412,11 +17413,17 @@ const movies=[
 // });
 
 
+// mongodump --db=Popcorn-Room --out=backup/
+// mongodb+srv://Elgizawy:elgizawy123@cluster0.fo96rsh.mongodb.net/
+// mongorestore --uri="mongodb+srv://Elgizawy:elgizawy123@cluster0.fo96rsh.mongodb.net/" backup/Popcorn-Room
+
 
 
 
 // الاتصال بقاعدة البيانات MongoDB
-mongoose.connect('mongodb://localhost:27017/Popcorn-Room')
+// mongoose.connect('mongodb://localhost:27017/Popcorn-Room')
+mongoose.connect(process.env.MONGO_URL)
+// mongoose.connect('mongodb+srv://Elgizawy:elgizawy123@cluster0.fo96rsh.mongodb.net/Popcorn-Room?retryWrites=true&w=majority')
 .then(() => console.log('✅ Connected to MongoDB'))
 .catch((err) => console.error('❌ MongoDB connection error:', err));
 
@@ -17481,3 +17488,4 @@ app.listen(PORT, () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
 });
 
+// mongodb+srv://Elgizawy:elgizawy123@cluster0.fo96rsh.mongodb.net/Popcorn-Room?retryWrites=true&w=majority&appName=Cluster0

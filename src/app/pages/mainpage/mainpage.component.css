@@ -248,6 +248,7 @@
     padding: 3rem 6%;
     background-color: var(--second-color);
     clip-path: ellipse(100% 100% at 50% 100%);
+    margin-top: 4rem;
 }
 .kids-part .kidsPart-container .text{
     text-align: center;
