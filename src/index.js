@@ -9,11 +9,11 @@ const Movie = require('./models/Movie');
 
 const app = express();
 app.use(express.json());
-app.use(cors()); // للسماح للـ Angular بالاتصال
+app.use(cors()); // 
 
 
-// const PORT = 3000;
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
+// const PORT = process.env.PORT || 3000;
 
 // API بسيط يعيد بيانات أفلام وهمية
 
