@@ -17421,9 +17421,9 @@ const movies=[
 
 
 // الاتصال بقاعدة البيانات MongoDB
-mongoose.connect('mongodb://localhost:27017/Popcorn-Room')
+// mongoose.connect('mongodb://localhost:27017/Popcorn-Room')
 
-// mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URL)
 // mongoose.connect('mongodb+srv://Elgizawy:elgizawy123@cluster0.fo96rsh.mongodb.net/Popcorn-Room?retryWrites=true&w=majority')
 .then(() => console.log('✅ Connected to MongoDB'))
 .catch((err) => console.error('❌ MongoDB connection error:', err));
