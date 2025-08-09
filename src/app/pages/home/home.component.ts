@@ -188,7 +188,7 @@ activeimg(){
     if(index == names.length){
       index = 0
     }
-   },4000)
+   },4500)
 }
 
 }
