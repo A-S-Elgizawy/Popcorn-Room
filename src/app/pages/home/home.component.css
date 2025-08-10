@@ -646,12 +646,12 @@
     height: fit-content;
     align-items: start;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     z-index: 6;
 }
 .background-image-container .names-container .name-con{
-    width: 6.5rem !important;
-    height: 2.5rem !important;
+    width: 6rem !important;
+    height: 2rem !important;
     position: relative;
     cursor: pointer;
 }
