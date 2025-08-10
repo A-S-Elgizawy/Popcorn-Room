@@ -20,12 +20,14 @@ export class Page5Component implements OnInit{
    this.getAllmovies()
    this.dropdown()
   }
-
+Loading: boolean = true;
 getAllmovies(){ 
+  this.Loading=true
   this.serviceCinema.getMovies().subscribe((data:any)=>{
   this.moviesList = data;
   this.movies=this.moviesList.slice(48,60)
   this.filteredMovies = [...this.movies];
+  this.Loading=false
   })
 }
 details(Id:number){

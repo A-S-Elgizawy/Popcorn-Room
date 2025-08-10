@@ -62,7 +62,45 @@
                 </div>
         </div>
         <!-- ========= movies ============== -->
-                <div class="new-added row">
+         <div class="row"  *ngIf="Loading">       
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+     </div>  
+                <div class="new-added row" *ngIf="!Loading">
                         <div class="item-con col-6 col-md-4 col-lg-3" *ngFor="let movie of filteredMovies" (click)="details(movie.movieId)">
                         <div class="item">
                             <a  class="img-container" >

@@ -71,30 +71,34 @@
  <div class="home-container">
  <!-- second swiper ===================================== -->
       <div class="swiper swipertwo Qlt">
-            <div class=" swiper-wrapper">
-                        <div class="swiper-slide " *ngFor="let movie of swiperfirstmoviesList" (click)="details(movie.movieId)">
-                            <a  class="img-container" >
-                                <img [src]="movie.movieImageUrl" alt="">
-                            </a>
-                            <div class="cover">
-                              <p>{{movie.movieName}}</p>
-                            </div> 
-                            <div class="quality" *ngIf="movie.filmQuality !== '' ">{{movie.filmQuality}}</div>
-                            <div class="absolute">
-                              <span>{{(movie.filmType).slice(0,(movie.filmType).indexOf(" "))}}</span>
-                              <span class="mightEmpty">{{(movie.filmType).slice((movie.filmType).indexOf(" "),(movie.filmType).lastIndexOf(" "))}}</span>
-                              <span class="mightEmpty">{{(movie.filmType).slice((movie.filmType).lastIndexOf(" "))}}</span>
-                            </div>                         
-                       </div>
-                 </div>
-          <div class="swiper-button-next"><i class="fa-solid fa-chevron-left"></i></div>
-          <div class="swiper-button-prev"><i class="fa-solid fa-chevron-right"></i></div>
+
+
+
+          <div class=" swiper-wrapper" >
+              <div class="swiper-slide " *ngFor="let movie of swiperfirstmoviesList" (click)="details(movie.movieId)">
+                          <a  class="img-container" >
+                              <img [src]="movie.movieImageUrl" alt="">
+                          </a>
+                          <div class="cover">
+                            <p>{{movie.movieName}}</p>
+                          </div> 
+                          <div class="quality" *ngIf="movie.filmQuality !== '' ">{{movie.filmQuality}}</div>
+                          <div class="absolute">
+                            <span>{{(movie.filmType).slice(0,(movie.filmType).indexOf(" "))}}</span>
+                            <span class="mightEmpty">{{(movie.filmType).slice((movie.filmType).indexOf(" "),(movie.filmType).lastIndexOf(" "))}}</span>
+                            <span class="mightEmpty">{{(movie.filmType).slice((movie.filmType).lastIndexOf(" "))}}</span>
+                          </div>                         
+              </div>
+          </div>
+
+          <div class="swiper-button-next" *ngIf="!Loading"><i class="fa-solid fa-chevron-left"></i></div>
+          <div class="swiper-button-prev" *ngIf="!Loading"><i class="fa-solid fa-chevron-right"></i></div>
       </div>
   <!-- second swiper ================================ -->
  <!-- second swiper ===================================== -->
 <!-- main heading ============================= -->
 <!-- <div *ngFor="let i of [1,2]"></div> -->
- <div class="main-heading">
+ <div class="main-heading " *ngIf="!Loading">
   <h2>المضاف حديثا</h2>
   <div class="con-span">
   <span class="line"></span>
@@ -105,8 +109,47 @@
   </div>
  </div>
 <!-- main heading ============================= -->
+
 <!-- new added ================================ -->
-                  <div class="new-added row">
+<div class="row"  *ngIf="Loading">       
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+            <div class="fake col-12 col-md-6 col-lg-3">
+              <div class="content"><span>Popcorn</span><br> Room</div>
+            </div>
+     </div>  
+                  <div class="new-added row" *ngIf="!Loading">  
                         <div class="item-con col-12 col-md-4 col-lg-3" *ngFor="let movie of newaddedmoviesList" (click)="details(movie.movieId)">
                         <div class="item">
                             <a  class="img-container" >

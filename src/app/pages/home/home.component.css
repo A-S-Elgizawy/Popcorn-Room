@@ -396,6 +396,29 @@
   content: "";
 } 
 /* swiper */
+.fake{
+    margin:.8rem 0;
+}
+ .content{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 30rem;
+    cursor: pointer;
+    border: 1px solid rgb(196, 196, 196);
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    padding-top: 160px;
+    background-image: linear-gradient(to top, black, transparent);
+    font-family: "Luckiest Guy";
+}
+.content span{
+    color: var(--primary-color);
+    font-family: "Luckiest Guy";
+}
+
 .Qlt .swiper-wrapper .swiper-slide{
     position: relative;
     border-radius: 10px;
@@ -588,17 +611,42 @@
 .special-page .item-con.active{
     width: 120% ;   
 } 
-@media (max-width: 600px){
+@media (min-width:424px) and (max-width: 600px){
     .background-image-container .image-con .names-container{
     position: absolute;
     bottom: 9rem;
     right: 2rem;
     display: flex;
     width: 100%;
-    /* justify-content: flex-start; */
     align-items: start;
     flex-direction: column;
     gap: 1.4rem;
+    z-index: 6;
+}
+.background-image-container .names-container .name-con{
+    width: 6.5rem !important;
+    height: 2.5rem !important;
+    position: relative;
+    cursor: pointer;
+}
+.background-image-container .names-container .name-con:after{
+    bottom: -.8rem;
+}
+
+}
+@media (max-width:414px) {
+
+.background-image-container .image-con .names-container{
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    align-items: start;
+    flex-direction: column;
+    gap: 3rem;
     z-index: 6;
 }
 .background-image-container .names-container .name-con{

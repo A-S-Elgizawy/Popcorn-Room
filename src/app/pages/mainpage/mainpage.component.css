@@ -175,7 +175,6 @@
 .plateForms .plateform-container{
     padding: 3rem 6% 6rem;
     background-color: var(--second-color);
-    /* background: #4b0082; */
     clip-path: ellipse(100% 100% at 50% 0%);
 
 }
@@ -308,9 +307,7 @@
     .items-con .item {
     padding: 0 .5rem !important;
   }
-    .plateform-container {
-    padding-bottom: 3rem !important;
-  }
+
   .main-page .mainPage-container .page-animation  .items-con .item p{
     font-size: 1rem;
     white-space: nowrap;
@@ -361,10 +358,15 @@
 .main-page .mainPage-container .bar-animation .cover.right{
     left: .5rem;
 }
+    .plateform-container {
+    padding-bottom: 2rem !important;
+    clip-path: ellipse(123% 100% at 50% 0%) !important;
+  }
 .kids-part .kidsPart-container{
+    margin-top: 1rem;
     padding: 3rem 6%;
     background-color: var(--second-color);
-    clip-path: ellipse(100% 100% at 50% 100%);
+    clip-path: ellipse(123% 100% at 50% 100%) !important;
 }
   
 }

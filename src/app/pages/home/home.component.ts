@@ -146,20 +146,24 @@ specialSwiper(){
   })
 }
 
+Loading: boolean = true;
 getAllmovies(){ 
+  this.Loading = true;  
   this.serviceCinema.getMovies().subscribe((data:any)=>{
-  console.log('RAW DATA:', data);
-  this.moviesList = data;
-  this.swiperfirstmoviesList=this.moviesList.slice(0,10)
-  this.swiperlastmoviesList=this.moviesList.slice(91)
-  this.newaddedmoviesList=this.moviesList.slice(11,23)
-  this.bestmoviesList=this.moviesList.slice(24,36)
-    setTimeout(()=>{
-      this.swipertwo()
-    },0)
-  })
-}
+    console.log('RAW DATA:', data);
+    this.moviesList = data;
+    this.swiperfirstmoviesList = this.moviesList.slice(0,10);
+    this.swiperlastmoviesList = this.moviesList.slice(91);
+    this.newaddedmoviesList = this.moviesList.slice(11,23);
+    this.bestmoviesList = this.moviesList.slice(24,36);
+    this.Loading = false;
+    setTimeout(() => {
+      this.swipertwo();
+    }, 0);
 
+      
+  });
+}
 
 animation(){
   const names = document.querySelectorAll(".name-con");

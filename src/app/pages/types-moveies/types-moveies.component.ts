@@ -30,12 +30,14 @@ export class TypesMoveiesComponent implements OnInit{
    this.getAllmovies()
    this.dropdown()
   }
-
+Loading: boolean = true;
 getAllmovies(){ 
+  this.Loading=true
   this.serviceCinema.getMovies().subscribe((data:any)=>{
   this.moviesList = data;
   this.movies=this.moviesList.slice(0,12)
   this.filteredMovies = [...this.movies];
+  this.Loading=false
   })
 }
 details(Id:number){

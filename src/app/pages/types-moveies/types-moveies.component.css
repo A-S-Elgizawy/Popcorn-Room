@@ -107,6 +107,28 @@
     text-align: center;
 }
 /* =========================== */
+.fake{
+    margin:.8rem 0;
+}
+.fake .content{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-top: 160px;
+    height: 30rem;
+    cursor: pointer;
+    border: 1px solid rgb(196, 196, 196);
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    text-align: center; 
+    background-image: linear-gradient(to top, black, transparent);
+    font-family: "Luckiest Guy";
+}
+.fake .content span{
+    color: var(--primary-color);
+    font-family: "Luckiest Guy";
+}
 .new-added{
     min-height: 14rem;
 }
