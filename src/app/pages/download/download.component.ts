@@ -20,7 +20,7 @@ movie:any={}
 
 getmovieId(){
   const movieId = this.activatedRoute.snapshot.paramMap.get("id")
-  movieId && this.serviceCinema.getMovieById(movieId).subscribe((res:any)=>{
+  movieId && this.serviceCinema.getMovieById(Number(movieId)).subscribe((res:any)=>{
    this.movie=res
    console.log("hellow"+this.movie);
    
