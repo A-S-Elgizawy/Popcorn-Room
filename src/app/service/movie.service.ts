@@ -20,7 +20,7 @@ export class MovieService {
       }
 
 
-  getMovieById(id: string | null): Observable<any> {
-  return this.http.get(`${this.apiUrl}/${id}`);
-  }
+      getMovieById(id: number | null): Observable<any> {
+      return this.http.get(`${this.apiUrl}/${id}`);
+      }
 }
